@@ -5,7 +5,7 @@ import languages, { DEFAULT_LOCALE } from '@/i18n/i18n.config.ts';
 const config: BlogConfig = {
   site: {
     title: 'Where1Returns',
-    baseUrl: 'https://tosuthien.org/', // Include the deployment directory, e.g. https://where1returns.com/blog/.
+    baseUrl: 'https://tosuthien.org/', // Include the deployment directory, e.g. https://.../blog/.
     defaultLocale: DEFAULT_LOCALE,
     locales: Object.keys(languages),
     localePrefixPolicy: 'redirect-to-default', // Recommended: unprefixed pages refresh directly to the default language.

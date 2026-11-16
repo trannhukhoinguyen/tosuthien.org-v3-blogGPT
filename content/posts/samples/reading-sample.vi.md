@@ -1,10 +1,10 @@
 ---
-title: 'Bài đọc mẫu: dải màu và khoảng trắng'
+title: 'Bài đọc mẫu - dải màu và khoảng trắng'
 slug: 'reading-sample'
 date: 2026-07-22
 description: 'Khám phá nhịp điệu từ các dải màu, đoạn văn, trích dẫn và hình minh họa.'
-categories: ['tùy chỉnh']
-tags: ['thiết kế']
+categories: ['customization']
+tags: ['design']
 toc: true
 shareCover: true
 image: '/images/covers/muon-phap-ve-mot-mot-ve-dau.avif'

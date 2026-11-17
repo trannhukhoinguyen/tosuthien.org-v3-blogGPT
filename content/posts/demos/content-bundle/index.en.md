@@ -5,7 +5,7 @@ date: 2026-09-28
 description: 'Manage articles, pages, categories, tags and attachments with files and bundles.'
 categories: ['guide']
 tags: ['content', 'i18n']
-image: '/images/covers/muon-phap-ve-mot-mot-ve-dau.avif'
+draft: true
 ---
 
 Articles, standalone pages, categories and tags live in `content/`. Organize them in folders and use frontmatter for titles, addresses and other details.

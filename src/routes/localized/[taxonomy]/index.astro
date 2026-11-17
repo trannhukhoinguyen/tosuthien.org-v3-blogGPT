@@ -1,13 +1,13 @@
 ---
-import { pageLocale } from '../../../lib/i18n';
-import config from '../../../lib/config';
-import Layout from '../../../layouts/Layout.astro';
-import ThemeIcon from '../../../components/ThemeIcon.astro';
-import ContentIntro from '../../../components/ContentIntro.astro';
-import BuiltinHeading from '../../../components/BuiltinHeading.astro';
-import { taxonomy, introFor, encodedSlug } from '../../../lib/content';
-import { contentImage } from '../../../lib/content-image';
-import { t, href } from '../../../lib/i18n';
+import { pageLocale } from '@/lib/i18n';
+import config from '@/lib/config';
+import Layout from '@/layouts/Layout.astro';
+import ThemeIcon from '@/components/ThemeIcon.astro';
+import ContentIntro from '@/components/ContentIntro.astro';
+import BuiltinHeading from '@/components/BuiltinHeading.astro';
+import { taxonomy, introFor, encodedSlug } from '@/lib/content';
+import { contentImage } from '@/lib/content-image';
+import { t, href } from '@/lib/i18n';
 export const getStaticPaths = () =>
   ['categories', 'tags'].map((kind) => ({ params: { taxonomy: kind } }));
 const lang = pageLocale(Astro.routePattern);

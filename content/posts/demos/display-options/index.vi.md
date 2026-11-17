@@ -6,6 +6,7 @@ description: 'Chọn hiển thị tiêu đề, tác giả, ngày tháng, thời 
 categories: ['writing']
 tags: ['design']
 updated: '2026-10-16'
+draft: true
 ---
 
 Bạn có thể tùy chọn các thông tin hiển thị trên trang bài viết, chẳng hạn như tiêu đề, tác giả và ngày tháng. Các thiết lập chung được quản lý tại `article.display`, trong khi các thiết lập riêng cho từng bài viết được cấu hình thông qua thuộc tính `display` trong phần frontmatter.

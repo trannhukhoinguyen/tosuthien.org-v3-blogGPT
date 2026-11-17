@@ -1,8 +1,8 @@
 ---
-import { pageLocale, routeLocales } from '../../../../lib/i18n';
-import config from '../../../../lib/config';
-import PostIndex from '../../../../components/PostIndex.astro';
-import { postsFor } from '../../../../lib/content';
+import { pageLocale, routeLocales } from '@/lib/i18n';
+import config from '@/lib/config';
+import PostIndex from '@/components/PostIndex.astro';
+import { postsFor } from '@/lib/content';
 export async function getStaticPaths({
   routePattern,
 }: import('astro').GetStaticPathsOptions) {

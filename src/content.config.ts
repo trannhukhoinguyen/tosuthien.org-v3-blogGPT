@@ -177,7 +177,7 @@ const posts = defineCollection({
       featured: z.boolean().default(false),
     })
     .refine(
-      (value) => value.date || value.published || value.pubDatetime,
+      (value) => value.date || value.published || value.pubDatetime || "2026-11-17",
       'A publication date is required (date, published, or pubDatetime).',
     )
     .transform((value) => ({

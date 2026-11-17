@@ -1,27 +1,27 @@
 ---
-import { pageLocale, routeLocales } from '../../../lib/i18n';
-import { localeInfo } from '../../../lib/translations';
-import { postPath } from '../../../lib/post-path';
+import { pageLocale, routeLocales } from '@/lib/i18n';
+import { localeInfo } from '@/lib/translations';
+import { postPath } from '@/lib/post-path';
 import { render } from 'astro:content';
-import config from '../../../lib/config';
-import Layout from '../../../layouts/Layout.astro';
-import ArticleMeta from '../../../components/ArticleMeta.astro';
-import ArticleUpdated from '../../../components/ArticleUpdated.astro';
-import ShareMenu from '../../../components/ShareMenu.astro';
-import ArticleToc from '../../../components/ArticleToc.astro';
-import { articleFeatures, articleDisplay } from '../../../lib/article-options';
+import config from '@/lib/config';
+import Layout from '@/layouts/Layout.astro';
+import ArticleMeta from '@/components/ArticleMeta.astro';
+import ArticleUpdated from '@/components/ArticleUpdated.astro';
+import ShareMenu from '@/components/ShareMenu.astro';
+import ArticleToc from '@/components/ArticleToc.astro';
+import { articleFeatures, articleDisplay } from '@/lib/article-options';
 import {
   postsFor,
   postHref,
   taxonomyLabels,
   encodedSlug,
   type Post,
-} from '../../../lib/content';
-import { canDiscover } from '../../../lib/policy';
-import { isRealTranslation } from '../../../lib/locale-routing';
-import { t, href } from '../../../lib/i18n';
-import { contentImage } from '../../../lib/content-image';
-import type { Locale } from '../../../types/config';
+} from '@/lib/content';
+import { canDiscover } from '@/lib/policy';
+import { isRealTranslation } from '@/lib/locale-routing';
+import { t, href } from '@/lib/i18n';
+import { contentImage } from '@/lib/content-image';
+import type { Locale } from '@/types/config';
 export async function getStaticPaths({
   routePattern,
 }: import('astro').GetStaticPathsOptions) {

@@ -5,7 +5,7 @@ date: 2026-09-28
 description: 'Quản lý bài viết, trang, danh mục, thẻ và tệp đính kèm thông qua các tệp tin và gói nội dung (bundle).'
 categories: ['guide']
 tags: ['content', 'i18n']
-image: '/images/covers/muon-phap-ve-mot-mot-ve-dau.avif'
+draft: true
 ---
 
 Các bài viết, trang độc lập, danh mục và thẻ đều nằm trong thư mục `content/`. Bạn có thể sắp xếp chúng vào các thư mục con và sử dụng phần frontmatter để khai báo tiêu đề, đường dẫn (slug) cùng các thông tin chi tiết khác.

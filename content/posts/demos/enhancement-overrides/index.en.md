@@ -5,6 +5,7 @@ date: 2026-09-03
 description: 'Choose enhancements for each entry and override global defaults.'
 categories: ['writing']
 tags: ['markdown']
+draft: true
 ---
 
 Math, diagrams, image lightboxes, callouts, outlines and share covers support global settings and per-entry overrides.

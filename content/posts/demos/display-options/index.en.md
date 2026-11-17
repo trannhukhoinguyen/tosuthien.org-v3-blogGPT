@@ -6,6 +6,7 @@ description: 'Choose titles, authors, dates, reading time, tags and sharing for 
 categories: ['writing']
 tags: ['design']
 updated: '2026-10-16'
+draft: true
 ---
 
 Choose which details appear on an article page, such as its title, author and dates. Global settings live in `article.display`; per-entry settings use `display` in frontmatter.

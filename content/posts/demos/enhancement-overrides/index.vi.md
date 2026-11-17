@@ -5,6 +5,7 @@ date: 2026-09-03
 description: 'Chọn các tính năng bổ trợ cho từng bài viết và ghi đè lên các thiết lập mặc định toàn cục.'
 categories: ['writing']
 tags: ['markdown']
+draft: true
 ---
 
 Các tính năng như công thức toán học, sơ đồ, trình xem ảnh (lightbox), khung chú thích (callout), mục lục và ảnh bìa chia sẻ tự động đều hỗ trợ cả thiết lập mặc định toàn cục lẫn tùy chọn ghi đè cho từng bài viết.

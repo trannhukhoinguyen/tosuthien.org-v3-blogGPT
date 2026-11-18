@@ -14,6 +14,7 @@ import remarkMath from 'remark-math';
 import rehypeMath from './src/plugins/rehype-math';
 import remarkCallouts from './src/plugins/remark-callouts';
 import { unified, type RemarkPlugins } from '@astrojs/markdown-remark';
+import AutoImport from "astro-auto-import";
 
 // Parse TeX even when rendering is disabled so MDX never treats formula braces
 // as JavaScript expressions. Without KaTeX it falls back to source code.
@@ -79,6 +80,16 @@ export default defineConfig({
       },
     }),
     relativeLinks(config.site.baseUrl),
+
+    AutoImport({
+      imports: [
+        // Hoặc bạn cũng có thể dùng alias (nếu project đã setup alias @/)
+        '@/components/post/SutraFieldset.astro',
+        '@/components/post/DharmaFieldset.astro',
+        '@/components/ui/DialogueBubble.astro',
+        '@/components/ui/links/Link2Post.astro',
+      ],
+    }),
   ],
   vite: { plugins: [tailwindcss()] },
 });

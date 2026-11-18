@@ -1,6 +1,6 @@
 ---
 title: 'Browsing and search: discover articles through conversation'
-image: /images/covers/muon-phap-ve-mot-mot-ve-dau.avif
+image: /images/covers/where-one-returns.avif
 slug: 'design'
 date: 2026-10-09
 description: 'A guide to search scopes, slash commands, reading outlines, sharing and site statistics.'

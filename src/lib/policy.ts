@@ -7,7 +7,7 @@ export interface Visibility {
 }
 
 export function isPublished(data: Visibility, now = new Date()): boolean {
-  return !data.draft && data.date.getTime() <= now.getTime();
+  return !data.draft && data.date?.getTime() <= now.getTime();
 }
 
 export function canRender(

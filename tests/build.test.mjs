@@ -7,7 +7,7 @@ test('production pages, RSS and Sitemap enforce article visibility', async () =>
   await access('dist/zh/posts/unlisted/index.html');
   await assert.rejects(access('dist/zh/posts/draft-example/index.html'));
   await assert.rejects(access('dist/zh/posts/future-example/index.html'));
-  for (const lang of ['vi', 'zh', 'en']) {
+  for (const lang of ['vi', 'zh', 'ja', 'ko', 'en']) {
     const list = await readFile(`dist/${lang}/posts/index.html`, 'utf8');
     const home = await readFile(`dist/${lang}/index.html`, 'utf8');
     const feed = await readFile(`dist/${lang}/rss.xml`, 'utf8');
@@ -55,7 +55,7 @@ test('rendered Markdown never points to stale code-renderer assets', async () =>
 });
 
 test('random recent article candidates are public, local, and generated', async () => {
-  for (const lang of ['vi', 'zh', 'en']) {
+  for (const lang of ['vi', 'zh', 'ja', 'ko', 'en']) {
     const html = await readFile(`dist/${lang}/index.html`, 'utf8');
     const attribute = html.match(/data-random-posts="([^"]+)"/);
     assert.ok(attribute, 'Homepage exposes random article candidates');
@@ -73,7 +73,7 @@ test('random recent article candidates are public, local, and generated', async 
 });
 
 test('generated taxonomy pages and bundles preserve content and colocated resources', async () => {
-  for (const lang of ['vi', 'zh', 'en']) {
+  for (const lang of ['vi', 'zh', 'ja', 'ko', 'en']) {
     const guide = await readFile(
       `dist/${lang}/categories/guide/index.html`,
       'utf8',
@@ -86,7 +86,7 @@ test('generated taxonomy pages and bundles preserve content and colocated resour
     assert.ok(guide.includes('class="content-intro"'));
     assert.ok(tags.includes('class="content-intro"'));
     assert.ok(guide.includes('class="post-list"'));
-    assert.ok(guide.includes('src="/images/covers/muon-phap-ve-mot-mot-ve-dau.avif"'));
+    assert.ok(guide.includes('src="/images/covers/where-one-returns.avif"'));
     assert.ok(
       post.includes(`href="/${lang}/posts/content-bundle/example.html"`),
     );

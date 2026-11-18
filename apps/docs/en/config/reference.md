@@ -39,7 +39,7 @@ export default {
     title: { zh: '我的博客', en: 'My Blog' }, // Localized (Required)
     baseUrl: 'https://example.com', // Canonical production URL
     defaultLocale: 'vi', // Primary locale code
-    locales: ['vi', 'zh', 'en'], // Enabled locale codes
+    locales: ['vi', 'zh', 'ja', 'ko', 'en'], // Enabled locale codes
     localePrefixPolicy: 'redirect-to-default', // 'redirect-to-default' | 'omit-default-prefix' | 'require-prefix'
     timezone: 'Asia/Shanghai', // IANA timezone string
   },

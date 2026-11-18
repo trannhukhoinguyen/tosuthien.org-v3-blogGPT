@@ -37,10 +37,10 @@ export function blogStatistics<
 >(posts: T[], timeZone: string, now = new Date()) {
   const entries = posts
     .map((post) => ({ post, words: characterCount(post.body ?? '') }))
-    .sort((a, b) => b.post.data.date.getTime() - a.post.data.date.getTime());
+    .sort((a, b) => b.post.data.date?.getTime() - a.post.data.date?.getTime());
   const words = entries.reduce((sum, entry) => sum + entry.words, 0);
-  const first = entries.at(-1)?.post.data.date.getTime();
-  const last = entries[0]?.post.data.date.getTime();
+  const first = entries.at(-1)?.post.data.date?.getTime();
+  const last = entries[0]?.post.data.date?.getTime();
   const publications = new Map<string, typeof entries>();
   for (const entry of entries) {
     const day = dayKey(entry.post.data.date, timeZone);
@@ -69,7 +69,7 @@ export function blogStatistics<
           Math.max(
             ...entries.map(({ post }) =>
               Math.max(
-                post.data.date.getTime(),
+                post.data.date?.getTime(),
                 post.data.updated?.getTime() ?? 0,
               ),
             ),

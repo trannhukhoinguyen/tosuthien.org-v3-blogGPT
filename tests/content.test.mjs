@@ -31,6 +31,7 @@ import contentBundles, {
 } from '../src/integrations/content-bundles.ts';
 import { createContent } from '../scripts/new.mjs';
 import config from '../blog.config.ts';
+import { DEFAULT_LOCALE } from '@/i18n/i18n.config.ts';
 
 const variant = (locale, key = 'group/welcome', slug = 'welcome') => ({
   data: { _key: key, _locale: locale, slug },
@@ -173,25 +174,28 @@ test('development bundle middleware serves JavaScript modules with an executable
 test('filename variants follow exact, neutral, default, then configured language order', () => {
   const exact = variant('en'),
     neutral = variant(undefined),
-    fallback = variant('vi'),
-    other = variant('fr');
+    fallback = variant(DEFAULT_LOCALE),
+    other = variant('ja');
   const choose = (entries) =>
     chooseVariants(entries, 'en', 'vi', ['vi', 'zh', 'fr', 'de']);
   assert.deepEqual(choose([fallback, neutral, other, exact]), [exact]);
   assert.deepEqual(choose([fallback, neutral, other]), [neutral]);
   assert.deepEqual(choose([other, fallback]), [fallback]);
   assert.deepEqual(
-    chooseVariants([variant('de'), other], 'en', 'vi', ['fr', 'de']),
+    chooseVariants([variant('ja'), other], 'en', DEFAULT_LOCALE, ['ko', 'zh']),
     [other],
   );
-  assert.deepEqual(chooseVariants([exact], 'zh', 'vi', ['zh', 'vi']), []);
+  assert.deepEqual(
+    chooseVariants([exact], 'zh', DEFAULT_LOCALE, ['zh', 'vi']),
+    [],
+  );
   assert.throws(() => choose([exact, exact]), /Duplicate content variant/);
-  assert.deepEqual(fileIdentity('nested/welcome.en.mdx', ['vi', 'zh', 'en']), {
+  assert.deepEqual(fileIdentity('nested/welcome.en.mdx', ['vi', 'zh', 'ja', 'ko', 'en']), {
     key: 'nested/welcome',
     locale: 'en',
     bundle: false,
   });
-  assert.deepEqual(fileIdentity('nested/story/index.zh.md', ['vi', 'zh', 'en']), {
+  assert.deepEqual(fileIdentity('nested/story/index.zh.md', ['vi', 'zh', 'ja', 'ko', 'en']), {
     key: 'nested/story/index',
     locale: 'zh',
     bundle: true,
@@ -201,7 +205,7 @@ test('filename variants follow exact, neutral, default, then configured language
       [exact, variant('en', 'different/welcome', 'different-url')],
       'en',
       'vi',
-      ['vi', 'zh', 'en'],
+      ['vi', 'zh', 'ja', 'ko', 'en'],
     ).length,
     2,
   );
@@ -242,7 +246,7 @@ test('all four collections discover nested standalone files and treat index subt
       `${base}/another/story/nested/index.mdx`,
       'also an attachment',
     );
-    assert.deepEqual(await contentFiles(path.join(root, base), ['vi', 'zh', 'en']), [
+    assert.deepEqual(await contentFiles(path.join(root, base), ['vi', 'zh', 'ja', 'ko', 'en']), [
       'another/story/index.en.mdx',
       'another/story/index.zh.md',
       'deep/folder/welcome.en.md',

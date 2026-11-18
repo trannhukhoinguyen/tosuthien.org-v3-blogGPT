@@ -287,7 +287,7 @@ test('production indexes all four public content types and preserves independent
   assert.ok(about.includes('data-article-toc'));
   await access('dist/zh/page-og/about.png');
   const list = await readFile('dist/zh/posts/index.html', 'utf8');
-  assert.ok(list.includes('src="/images/covers/muon-phap-ve-mot-mot-ve-dau.avif"'));
+  assert.ok(list.includes('src="/images/covers/where-one-returns.avif"'));
   const taxonomy = await readFile(
     'dist/zh/categories/guide/index.html',
     'utf8',

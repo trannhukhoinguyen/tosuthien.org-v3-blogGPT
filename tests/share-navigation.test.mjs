@@ -4,6 +4,7 @@ import { readFile } from 'node:fs/promises';
 import vm from 'node:vm';
 import ts from 'typescript';
 import { setImmediate as flush } from 'node:timers/promises';
+import { DEFAULT_LOCALE } from '@/i18n/i18n.config.ts';
 
 // Run the installed Astro router too: cancelling a pending navigation with a
 // same-page fragment keeps the old document without another astro:page-load.
@@ -66,7 +67,7 @@ function browser({ deferCopy = false } = {}) {
         : null;
   const document = new EventTarget();
   document.title = 'Current article';
-  document.body = { dataset: { locale: 'vi' } };
+  document.body = { dataset: { locale: DEFAULT_LOCALE } };
   document.querySelector = (selector) =>
     selector === '[data-share-root]'
       ? root

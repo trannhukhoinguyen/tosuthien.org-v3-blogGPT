@@ -13,7 +13,7 @@ interface Props {
 const { lang, id } = Astro.props;
 const ui = t(lang);
 const recent = (await discoverablePosts(lang))
-  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+  .sort((a, b) => b.data.date?.getTime() - a.data.date?.getTime())
   .slice(0, config.posts.menuLimit);
 ---
 

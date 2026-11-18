@@ -95,7 +95,7 @@ test('statistics aggregate real characters and timezone days, handle empty and s
     stats.firstPublication.toISOString(),
     '2026-02-28T16:30:00.000Z',
   );
-  assert.equal(stats.lastUpdate.toISOString(), '2026-03-01T16:30:00.000Z');
+  assert.equal(stats.lastUpdate?.toISOString(), '2026-03-01T16:30:00.000Z');
   assert.equal(
     stats.heatmap.find((day) => day.date === '2026-02-29').entries[0].post.data
       .title,
@@ -104,7 +104,7 @@ test('statistics aggregate real characters and timezone days, handle empty and s
   const updated = post('Old', '2026-02-01', 'a');
   updated.data.updated = new Date('2026-03-02');
   assert.equal(
-    blogStatistics([updated], 'UTC').lastUpdate.toISOString(),
+    blogStatistics([updated], 'UTC').lastUpdate?.toISOString(),
     '2026-03-02T00:00:00.000Z',
   );
   assert.equal(blogStatistics([], 'UTC').lastUpdate, undefined);
@@ -128,7 +128,7 @@ test('context windows merge adjacent hits, retain separated matches, and escape 
 });
 
 test('display guides keep normal article controls and pages expose configured publication/update dates', async () => {
-  for (const lang of ['vi', 'zh', 'en']) {
+  for (const lang of ['vi', 'zh', 'ja', 'ko', 'en']) {
     const demo = await readFile(
       `dist/${lang}/posts/display-options/index.html`,
       'utf8',

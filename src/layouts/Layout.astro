@@ -44,7 +44,7 @@ const ui = t(lang);
 const features = Astro.props.features ?? articleFeatures({}, config.article);
 const publicPosts = await discoverablePosts(lang);
 const searchRecent = publicPosts
-  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+  .sort((a, b) => b.data.date?.getTime() - a.data.date?.getTime())
   .slice(0, 6);
 const prefix = href(lang);
 const isHome =
@@ -248,7 +248,7 @@ const pageAnimation =
     data-completion-locales={JSON.stringify(config.site.locales)}
     data-recent-urls={JSON.stringify(
       [...publicPosts]
-        .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+        .sort((a, b) => b.data.date?.getTime() - a.data.date?.getTime())
         .slice(0, config.posts.randomLimit)
         .map((post) => postHref(post, lang)),
     )}

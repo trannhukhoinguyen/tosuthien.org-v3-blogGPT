@@ -26,7 +26,7 @@ const avatar = /^(https?:|data:)/.test(config.author.avatar)
       </span>
     )}
     {display.published && entry.data.date && (
-      <time datetime={entry.data.date.toISOString()}>
+      <time datetime={entry.data.date?.toISOString()}>
         {dateLabel(entry.data.date, lang)}
       </time>
     )}

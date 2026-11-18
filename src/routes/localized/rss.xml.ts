@@ -8,7 +8,7 @@ import { localize } from '../../lib/i18n';
 export const GET: APIRoute = async ({ routePattern }) => {
   const lang = pageLocale(routePattern);
   const posts = (await discoverablePosts(lang)).sort(
-    (a, b) => b.data.date.getTime() - a.data.date.getTime(),
+    (a, b) => b.data.date?.getTime() - a.data.date?.getTime(),
   );
   return rss({
     title: localize(config.site.title, lang),

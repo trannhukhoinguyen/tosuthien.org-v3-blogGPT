@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import vm from 'node:vm';
 import ts from 'typescript';
+import { DEFAULT_LOCALE } from '@/i18n/i18n.config.ts';
 
 const script = ts.transpileModule(await readFile('src/scripts/ui.ts', 'utf8'), {
   compilerOptions: {
@@ -49,7 +50,7 @@ function browser(storage, defaultTheme = 'light') {
   };
   const document = {
     documentElement: element(),
-    body: { dataset: { locale: 'vi', base: '/', localeRoot: '/vi/' } },
+    body: { dataset: { locale: DEFAULT_LOCALE, base: '/', localeRoot: '/vi/' } },
     querySelector: (selector) =>
       selector === '[data-sidebar-resize]' ? resizeHandle : null,
     querySelectorAll: (selector) =>

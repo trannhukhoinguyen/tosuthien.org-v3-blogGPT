@@ -16,7 +16,7 @@ const { lang, value = '', compact = false, home = false } = Astro.props;
 const ui = t(lang);
 const recentPosts = home
   ? (await discoverablePosts(lang))
-      .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+      .sort((a, b) => b.data.date?.getTime() - a.data.date?.getTime())
       .slice(0, config.posts.randomLimit)
   : [];
 const recentUrls = recentPosts.map((post) => postHref(post, lang));

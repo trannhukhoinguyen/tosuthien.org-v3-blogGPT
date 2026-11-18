@@ -101,7 +101,7 @@ test('demo pages are index language bundles and builtins share page titles and d
     node.nodeName === '#text'
       ? node.value
       : (node.childNodes ?? []).map(text).join('');
-  for (const lang of ['vi', 'zh', 'en'])
+  for (const lang of ['vi', 'zh', 'ja', 'ko', 'en'])
     for (const route of ['links', 'posts', 'categories', 'archives']) {
       const source = await readFile(
         `content/pages/${route}/index.${lang}.md`,
@@ -134,7 +134,7 @@ test('demo pages are index language bundles and builtins share page titles and d
         description,
       );
     }
-  for (const lang of ['vi', 'zh', 'en']) {
+  for (const lang of ['vi', 'zh', 'ja', 'ko', 'en']) {
     const html = await readFile(
       `dist/${lang}/posts/article-enhancements/index.html`,
       'utf8',

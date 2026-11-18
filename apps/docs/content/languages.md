@@ -10,7 +10,7 @@ Where1Returns 原生支持多语言内容管理与国际化界面（i18n）。�
 export default {
   site: {
     defaultLocale: 'vi',
-    locales: ['vi', 'zh', 'en'],
+    locales: ['vi', 'zh', 'ja', 'ko', 'en'],
     localePrefixPolicy: 'omit-default-prefix',
   },
 };

@@ -22,7 +22,7 @@ const friends: FriendsConfig = [
           en: 'A fictional portfolio site.',
         },
         url: 'https://example.com/alpha',
-        avatar: '/images/covers/muon-phap-ve-mot-mot-ve-dau.avif',
+        avatar: '/images/covers/where-one-returns.avif',
       },
       {
         name: 'Beta Journal',
@@ -42,7 +42,7 @@ const friends: FriendsConfig = [
           en: 'A fictional collection of knowledge notes.',
         },
         url: 'https://example.com/gamma',
-        avatar: '/images/covers/muon-phap-ve-mot-mot-ve-dau.avif',
+        avatar: '/images/covers/where-one-returns.avif',
       },
     ],
   },

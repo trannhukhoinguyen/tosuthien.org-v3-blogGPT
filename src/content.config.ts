@@ -165,7 +165,7 @@ const posts = defineCollection({
   loader: loader('posts'),
   schema: common
     .extend({
-      date,
+      date: date.default(new Date()),
       published: date,
       pubDatetime: date,
       updated: date,

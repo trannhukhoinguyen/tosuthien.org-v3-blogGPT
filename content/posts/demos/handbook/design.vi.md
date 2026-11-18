@@ -1,6 +1,6 @@
 ---
 title: 'Duyệt và tìm kiếm: khám phá bài viết thông qua hội thoại'
-image: /images/covers/muon-phap-ve-mot-mot-ve-dau.avif
+image: /images/covers/where-one-returns.avif
 slug: 'design'
 date: 2026-10-09
 description: 'Hướng dẫn về phạm vi tìm kiếm, các lệnh dấu gạch chéo (slash commands), dàn ý bài đọc, chia sẻ và số liệu thống kê trang web.'

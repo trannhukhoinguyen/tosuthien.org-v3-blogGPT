@@ -46,7 +46,7 @@ export async function postsFor(
     .sort(
       (a, b) =>
         Number(b.data.featured) - Number(a.data.featured) ||
-        b.data.date.getTime() - a.data.date.getTime(),
+        b.data.date?.getTime() - a.data.date?.getTime(),
     );
 }
 export async function textEntriesFor<K extends 'pages' | TermKind>(

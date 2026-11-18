@@ -9,8 +9,8 @@ export function footerPeriod(
   const date = new Date(`${start}T00:00:00Z`);
   if (
     !/^\d{4}-\d{2}-\d{2}$/.test(start) ||
-    !Number.isFinite(date.getTime()) ||
-    date.toISOString().slice(0, 10) !== start
+    !Number.isFinite(date?.getTime()) ||
+    date?.toISOString().slice(0, 10) !== start
   )
     throw new Error('footer.since must be a year or an ISO date (YYYY-MM-DD).');
   const parts = new Intl.DateTimeFormat(DEFAULT_LOCALE, {
@@ -25,7 +25,7 @@ export function footerPeriod(
   const today = Date.parse(`${year}-${part('month')}-${part('day')}T00:00:00Z`);
   return {
     years: start.slice(0, 4) === year ? year : `${start.slice(0, 4)} – ${year}`,
-    days: Math.max(0, Math.floor((today - date.getTime()) / 86400000)),
+    days: Math.max(0, Math.floor((today - date?.getTime()) / 86400000)),
   };
 }
 

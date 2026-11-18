@@ -11,7 +11,7 @@ import {
 } from '../src/lib/validate-config.ts';
 
 test('localized copy resolves partial maps, configured order and intentionally blank translations', () => {
-  const resolve = (value, lang = 'en', fallback = 'vi', order = ['vi', 'zh', 'en']) =>
+  const resolve = (value, lang = 'en', fallback = 'vi', order = ['vi', 'zh', 'ja', 'ko', 'en']) =>
     resolveLocalized(value, lang, fallback, order);
   assert.equal(resolve('Where1Returns'), 'Where1Returns');
   assert.equal(resolve({ zh: '中文', en: 'English' }), 'English');
@@ -45,7 +45,7 @@ test('public configuration accepts localized names and rejects malformed copy be
 });
 
 test('translated demo pages render clean identity text and covers precede article titles', async () => {
-  for (const lang of ['vi', 'zh', 'en']) {
+  for (const lang of ['vi', 'zh', 'ja', 'ko', 'en']) {
     const article = await readFile(
       `dist/${lang}/posts/welcome/index.html`,
       'utf8',

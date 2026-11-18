@@ -22,7 +22,7 @@ const posts = await postsFor(lang);
 const pinned = posts.filter((post) => post.data.featured);
 const recent = posts
   .filter((post) => !post.data.featured)
-  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+  .sort((a, b) => b.data.date?.getTime() - a.data.date?.getTime());
 const currentPath = Astro.url.pathname;
 const [startItem, ...navItems] = config.sidebar.items;
 const avatar = /^(https?:|data:)/.test(config.author.avatar)

@@ -26,7 +26,7 @@ const tableFields = (text) =>
 
 test('demo translations retain the same publication settings, section coverage and destinations', async () => {
   const groups = new Map();
-  for (const entry of await readContentFiles(process.cwd(), ['vi', 'zh', 'en'])) {
+  for (const entry of await readContentFiles(process.cwd(), ['vi', 'zh', 'ja', 'ko', 'en'])) {
     const key = `${entry.kind}/${entry.identity.key}`;
     const group = groups.get(key) ?? {};
     group[entry.identity.locale] = entry;

@@ -10,7 +10,7 @@ Configure your supported languages in `blog.config.ts` under `site`:
 export default {
   site: {
     defaultLocale: 'vi',
-    locales: ['vi', 'zh', 'en'],
+    locales: ['vi', 'zh', 'ja', 'ko', 'en'],
     localePrefixPolicy: 'omit-default-prefix',
   },
 };

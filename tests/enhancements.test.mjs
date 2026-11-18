@@ -14,7 +14,7 @@ const attr = (node, name) =>
   node.attrs?.find((attribute) => attribute.name === name)?.value;
 
 test('localized MDX renders math, callouts, and valid hierarchical heading links', async () => {
-  for (const lang of ['vi', 'zh', 'en']) {
+  for (const lang of ['vi', 'zh', 'ja', 'ko', 'en']) {
     const html = await readFile(
       `dist/${lang}/posts/article-enhancements/index.html`,
       'utf8',
@@ -56,7 +56,7 @@ test('localized MDX renders math, callouts, and valid hierarchical heading links
 });
 
 test('share cards are real PNG files, use one canonical social image, and respect per-post opt-out', async () => {
-  for (const lang of ['vi', 'zh', 'en']) {
+  for (const lang of ['vi', 'zh', 'ja', 'ko', 'en']) {
     const png = await readFile(`dist/${lang}/og/article-enhancements.png`);
     assert.equal(png.subarray(0, 8).toString('hex'), '89504e470d0a1a0a');
     assert.equal(png.readUInt32BE(16), 1200);
@@ -111,7 +111,7 @@ test('callout transformation preserves nested Markdown and unknown quote markers
 });
 
 test('enhancement guides retain normal reading controls while presenting overrides as code', async () => {
-  for (const lang of ['vi', 'zh', 'en']) {
+  for (const lang of ['vi', 'zh', 'ja', 'ko', 'en']) {
     const html = await readFile(
       `dist/${lang}/posts/enhancement-overrides/index.html`,
       'utf8',
@@ -127,7 +127,7 @@ test('enhancement guides retain normal reading controls while presenting overrid
 });
 
 test('builtin introductions provide titles, categories link tags, and friends search follows body content', async () => {
-  for (const lang of ['vi', 'zh', 'en']) {
+  for (const lang of ['vi', 'zh', 'ja', 'ko', 'en']) {
     const posts = await readFile(`dist/${lang}/posts/index.html`, 'utf8');
     const secondPage = await readFile(
       `dist/${lang}/posts/page/2/index.html`,

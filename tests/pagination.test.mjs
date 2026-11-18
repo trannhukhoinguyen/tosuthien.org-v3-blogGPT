@@ -12,7 +12,7 @@ const findAll = (node, predicate) => [
 ];
 
 test('sidebar Recent includes every unpinned article in date order, with pinned posts shown separately', async () => {
-  for (const lang of ['vi', 'zh', 'en']) {
+  for (const lang of ['vi', 'zh', 'ja', 'ko', 'en']) {
     const feed = await readFile(`dist/${lang}/rss.xml`, 'utf8');
     const articles = [...feed.matchAll(/<item>([\s\S]*?)<\/item>/g)].map(
       ([, item]) => ({
@@ -63,7 +63,7 @@ test('sidebar Recent includes every unpinned article in date order, with pinned 
 });
 
 test('every list page exposes its actual page range and localized destination paths for jumping', async () => {
-  for (const lang of ['vi', 'zh', 'en']) {
+  for (const lang of ['vi', 'zh', 'ja', 'ko', 'en']) {
     const first = parse(
       await readFile(`dist/${lang}/posts/index.html`, 'utf8'),
     );

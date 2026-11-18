@@ -58,7 +58,7 @@ const { Content, headings } = await render(post);
 const discoverable = canDiscover(post.data);
 const otherPosts = (await postsFor(lang))
   .filter((entry) => canDiscover(entry.data))
-  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+  .sort((a, b) => b.data.date?.getTime() - a.data.date?.getTime());
 const index = otherPosts.findIndex((entry) => entry.id === post.id);
 const newer = index > 0 ? otherPosts[index - 1] : undefined;
 const older = index >= 0 ? otherPosts[index + 1] : undefined;
@@ -146,7 +146,7 @@ const shareImage = features.shareCover
     {(display.share ||
       (display.updated &&
         post.data.updated &&
-        post.data.updated.getTime() !== post.data.date.getTime()) ||
+        post.data.updated.getTime() !== post.data.date?.getTime()) ||
       (display.tags && post.data.tags.length > 0)) && (
       <div class="article-end" data-pagefind-ignore>
         {display.tags &&

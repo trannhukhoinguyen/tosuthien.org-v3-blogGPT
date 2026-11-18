@@ -39,7 +39,7 @@ export default {
     title: { zh: '我的博客', en: 'My Blog' }, // Localized（必填）
     baseUrl: 'https://example.com', // 正式环境的完整域名
     defaultLocale: 'vi', // 默认语言代码
-    locales: ['vi', 'zh', 'en'], // 启用的语言代码列表
+    locales: ['vi', 'zh', 'ja', 'ko', 'en'], // 启用的语言代码列表
     localePrefixPolicy: 'redirect-to-default', // 'redirect-to-default' | 'omit-default-prefix' | 'require-prefix'
     timezone: 'Asia/Shanghai', // 时区（IANA 格式）
   },

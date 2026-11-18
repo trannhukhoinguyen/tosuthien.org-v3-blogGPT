@@ -130,7 +130,8 @@ const date = z
   .string()
   .refine(validContentDate, dateRule)
   .transform(parseContentDate)
-  .optional();
+  .optional()
+  .default(new Date());
 const common = z.object({
   title: z.string(),
   description: z.string().default(''),
@@ -147,6 +148,7 @@ const common = z.object({
   callouts: z.boolean().optional(),
   toc: z.boolean().optional(),
   shareCover: z.boolean().optional(),
+  audio: z.boolean().optional(),
   display: z
     .object({
       author: z.boolean().optional(),
@@ -165,7 +167,7 @@ const posts = defineCollection({
   loader: loader('posts'),
   schema: common
     .extend({
-      date: date.default(new Date()),
+      date,
       published: date,
       pubDatetime: date,
       updated: date,

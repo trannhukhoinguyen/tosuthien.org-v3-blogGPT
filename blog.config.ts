@@ -105,6 +105,7 @@ const config: BlogConfig = {
       day: 'numeric',
     },
     showDraftsInDev: true,
+    showAudio: false,
   },
   sidebar: {
     items: [

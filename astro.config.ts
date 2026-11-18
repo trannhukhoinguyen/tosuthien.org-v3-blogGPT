@@ -84,10 +84,10 @@ export default defineConfig({
     AutoImport({
       imports: [
         // Hoặc bạn cũng có thể dùng alias (nếu project đã setup alias @/)
-        '@/components/post/SutraFieldset.astro',
-        '@/components/post/DharmaFieldset.astro',
+        '@/components/ui/SutraFieldset.astro',
+        '@/components/ui/DharmaFieldset.astro',
         '@/components/ui/DialogueBubble.astro',
-        '@/components/ui/links/Link2Post.astro',
+        '@/components/ui/Link2Post.astro',
       ],
     }),
   ],

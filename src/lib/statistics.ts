@@ -1,6 +1,6 @@
 import type { StatisticsOptions } from '../types/config';
 import { characterCount } from './footer.ts';
-import languages, { DEFAULT_LOCALE } from '@/i18n/i18n.config.ts';
+import { DEFAULT_LOCALE } from '@/i18n/i18n.config.ts';
 
 export const statisticsOptions = (
   options: Partial<StatisticsOptions> = {},

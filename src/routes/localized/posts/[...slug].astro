@@ -22,6 +22,7 @@ import { isRealTranslation } from '@/lib/locale-routing';
 import { t, href } from '@/lib/i18n';
 import { contentImage } from '@/lib/content-image';
 import type { Locale } from '@/types/config';
+import AudioPlayer from '@/components/ui/AudioPlayer.astro';
 export async function getStaticPaths({
   routePattern,
 }: import('astro').GetStaticPathsOptions) {
@@ -138,6 +139,11 @@ const shareImage = features.shareCover
       <p class="article-note" data-pagefind-ignore>
         {ui.draftNotice}
       </p>
+    )}
+
+    <!-- 🔊 Accessible Audio Player (Text-to-Speech) -->
+    {config.posts.showAudio && post.data.audio !== false && (
+      <AudioPlayer selector=".article-content" title={post.data.title} label="Listen to Article" />
     )}
 
     <div class="article-content prose" data-search-content>

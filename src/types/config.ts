@@ -122,6 +122,7 @@ export interface BlogConfig {
     menuLimit: number;
     randomLimit: number;
     showDraftsInDev: boolean;
+    showAudio: boolean;
     dateFormat: Intl.DateTimeFormatOptions;
   };
 

@@ -270,6 +270,7 @@ const avatar = /^(https?:|data:)/.test(config.author.avatar)
                   aria-current={locale === lang ? 'true' : undefined}
                   role="menuitemradio"
                   aria-checked={locale === lang}
+                  title={localeInfo(locale)?.title}
                 >
                   <span>{localeInfo(locale).label}</span>
                   <ThemeIcon name="check" size={16} class="menu-check" />

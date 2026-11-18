@@ -1,0 +1,218 @@
+:root {
+  /* Monotone Palette */
+  --color-white: #fff;
+  --color-whitesmoke: whitesmoke;
+  --color-light-gray: #f5f5f5;
+  --color-silver: silver;
+  --color-silver-dark: darkgray;
+  --color-accent-lightgray: lightgray;
+  --color-accent-lightgrey: lightgrey;
+  --color-accent-lightslategray: lightslategray;
+  --color-accent-lightslategrey: lightslategrey;
+  --color-accent-slategray: slategray;
+  --color-accent-slategrey: slategrey;
+  --color-medium-gray: #888;
+  --color-gray: gray; /* grey */
+  --color-dimgray: dimgray;
+  --color-dark-gray: #333;
+  --color-black: #000;
+
+  /* Linear Color */
+  --linear-red: linear-gradient(90deg, red, #fbe7e7);
+  --linear-gold: linear-gradient(90deg, gold, #fff4cc);
+  --linear-pink: linear-gradient(90deg, pink, #ffdbea);
+  --linear-buddha-glow: linear-gradient(120deg, #bf953f 0%, #ffd700 35%, #fff6db 50%, #ffd700 65%, #bf953f 100%);
+  --linear-multi: linear-gradient(-45deg, #ee7752, gold, #e73c7e, #23a6d5, darkkhaki, #23d5ab);
+
+  /* Accent Color */
+  --color-accent-mistyrose: mistyrose;
+  --color-accent-red: red;
+  --color-accent-crimson: crimson;
+  --color-accent-darkred: darkred;
+  --color-accent-green-indianred: indianred;
+  --color-accent-lightpink: lightpink;
+  --color-accent-pink: pink;
+  --color-accent-lightcoral: lightcoral;
+  --color-accent-palevioletred: palevioletred;
+  --color-accent-hotpink: hotpink;
+  --color-accent-mediumvioletred: mediumvioletred;
+  --color-accent-deeppink: deeppink;
+  --color-accent-linen: linen;
+  --color-accent-khaki: #f8f8f5;
+  --color-accent-darkkhaki: darkkhaki;
+  --color-accent-olive: olive;
+  --color-accent-darkolivegreen: darkolivegreen;
+  --color-accent-honeydew: honeydew;
+  --color-accent-lightyellow: lightyellow;
+  --color-accent-wheat: wheat;
+  --color-accent-lightgoldenrodyellow: lightgoldenrodyellow;
+  --color-accent-palegoldenrod: palegoldenrod;
+  --color-accent-yellow: yellow;
+  --color-accent-gold: gold;
+  --color-accent-goldenrod: #a07710;
+  --color-accent-darkgoldenrod: darkgoldenrod;
+  --color-accent-darkorange: darkorange;
+  --color-accent-orange: orange;
+  --color-accent-coral: coral;
+  --color-accent-darksalmon: darksalmon;
+  --color-accent-orangered: orangered;
+  --color-accent-tomato: tomato;
+  --color-accent-gainsboro: gainsboro;
+  --color-accent-floralwhite: floralwhite;
+  --color-accent-cornsilk: cornsilk;
+  --color-accent-ivory: ivory;
+  --color-accent-beige: beige;
+  --color-accent-antiquewhite: antiquewhite;
+  --color-accent-blanchedalmond: blanchedalmond;
+  --color-accent-bisque: bisque;
+  --color-accent-seashell: seashell;
+  --color-accent-snow: snow;
+  --color-accent-ghostwhite: ghostwhite;
+  --color-accent-oldlace: oldlace;
+  --color-accent-lemonchiffon: lemonchiffon;
+  --color-accent-papayawhip: papayawhip;
+  --color-accent-moccasin: moccasin;
+  --color-accent-navajowhite: navajowhite;
+  --color-accent-peachpuff: peachpuff;
+  --color-accent-tan: tan;
+  --color-accent-rosybrown: rosybrown;
+  --color-accent-burlywood: burlywood;
+  --color-accent-sandybrown: sandybrown;
+  --color-accent-lightsalmon: lightsalmon;
+  --color-accent-salmon: salmon;
+  --color-accent-peru: peru;
+  --color-accent-indianred: indianred;
+  --color-accent-chocolate: chocolate;
+  --color-accent-sienna: sienna;
+  --color-accent-saddlebrown: saddlebrown;
+  --color-accent-brown: brown;
+  --color-accent-firebrick: firebrick;
+  --color-accent-maroon: maroon;
+  --color-accent-lavender: lavender;
+  --color-accent-lavenderblush: lavenderblush;
+  --color-accent-thistle: thistle;
+  --color-accent-plum: plum;
+  --color-accent-violet: violet;
+  --color-accent-blueviolet: blueviolet;
+  --color-accent-fuchsia: fuchsia; /* magenta */
+  --color-accent-purple: purple;
+  --color-accent-darkmagenta: darkmagenta;
+  --color-accent-darkorchid: darkorchid;
+  --color-accent-indigo: indigo;
+  --color-accent-orchid: orchid;
+  --color-accent-darkviolet: darkviolet;
+  --color-accent-rebeccapurple: rebeccapurple;
+  --color-accent-mediumorchid: mediumorchid;
+  --color-accent-mediumpurple: mediumpurple;
+  --color-accent-slateblue: slateblue;
+  --color-accent-mediumslateblue: mediumslateblue;
+  --color-accent-darkslateblue: darkslateblue;
+  --color-accent-greenyellow: greenyellow;
+  --color-accent-yellowgreen: yellowgreen;
+  --color-accent-palegreen: palegreen;
+  --color-accent-lightgreen: lightgreen;
+  --color-accent-springgreen: springgreen;
+  --color-accent-lawngreen: lawngreen;
+  --color-accent-forestgreen: forestgreen;
+  --color-accent-darkseagreen: darkseagreen;
+  --color-accent-lime: lime;
+  --color-accent-chartreuse: chartreuse;
+  --color-accent-limegreen: limegreen;
+  --color-accent-green: #02b802;
+  --color-accent-green-dark: green;
+  --color-accent-green-darkgreen: darkgreen;
+  --color-accent-olivedrab: olivedrab;
+  --color-accent-mediumspringgreen: mediumspringgreen;
+  --color-accent-mediumaquamarine: mediumaquamarine;
+  --color-accent-mediumseagreen: mediumseagreen;
+  --color-accent-seagreen: seagreen;
+  --color-accent-aquamarine: aquamarine;
+  --color-accent-lightseagreen: lightseagreen;
+  --color-accent-aqua: aqua; /* cyan */
+  --color-accent-darkturquoise: darkturquoise;
+  --color-accent-cadetblue: cadetblue;
+  --color-accent-mediumturquoise: mediumturquoise;
+  --color-accent-turquoise: turquoise;
+  --color-accent-darkcyan: darkcyan;
+  --color-accent-teal: teal;
+  --color-silver-darkslategray: darkslategray;
+  --color-accent-mintcream: mintcream;
+  --color-accent-azure: azure;
+  --color-accent-aliceblue: aliceblue;
+  --color-accent-lightcyan: lightcyan;
+  --color-accent-lightblue: lightblue;
+  --color-accent-lightsteelblue: lightsteelblue;
+  --color-accent-paleturquoise: paleturquoise;
+  --color-accent-powderblue: powderblue;
+  --color-accent-skyblue: skyblue;
+  --color-accent-deepskyblue: deepskyblue;
+  --color-accent-lightskyblue: lightskyblue;
+  --color-accent-cornflowerblue: cornflowerblue;
+  --color-accent-steelblue: steelblue;
+  --color-accent-royalblue: royalblue;
+  --color-accent-dodgerblue: dodgerblue;
+  --color-accent-blue: blue;
+  --color-accent-mediumblue: mediumblue;
+  --color-accent-navy: navy;
+  --color-accent-darkblue: darkblue;
+  --color-accent-midnightblue: midnightblue;
+  --color-accent-theme: #c4a604;
+  --color-accent: #f3e287;
+
+  /* Semantic Colors */
+  --color-background: var(--color-white);
+  --color-background-accent: var(--color-accent);
+  --color-background-overlay: var(--color-black);
+  --color-background-pagination: var(--color-accent-goldenrod);
+  --color-background-toc: var(--color-accent-goldenrod);
+  --color-background-footer: var(--color-white);
+  --color-surface: var(--color-light-gray);
+  --color-text-primary: var(--color-white);
+  --color-text-title: var(--color-black);
+  --color-text-pagination: var(--color-black);
+  --color-text-toc: var(--color-white);
+  --color-text-footer: var(--color-black);
+  --color-text-secondary: var(--color-dark-gray);
+  --color-text-muted: var(--color-medium-gray);
+  --color-border: var(--color-medium-gray);
+  --color-huatou: var(--color-accent-goldenrod);
+
+  /* Light Theme (Mặc định: Giấy mộc, Son gạch, Mực tàu) */
+  --sgkb-primary: #b33919;           /* Son đỏ gạch trầm */
+  --sgkb-primary-hover: #8c2a10;     /* Son đậm khi hover */
+  --sgkb-primary-light: #d4af37;     /* Vàng son / Trà son */
+  --sgkb-primary-soft: #fbf4ee;      /* Nền tab active sáng nhẹ */
+  --sgkb-primary-border: #b33919;
+  --sgkb-bg-main: #fff;
+  --sgkb-bg-card: #fff;
+  --sgkb-bg-gray: #f7f5f0;           /* Nền giấy dó nhạt */
+  --sgkb-bg-hover: #eae5d9;          /* Hover rõ nét */
+  --sgkb-border: #d4c5b9;            /* Viền xám trà mộc */
+  --sgkb-border-strong: #8c7a6b;     /* Viền đậm hơn */
+  --sgkb-text-main: #1f1a17;         /* Nâu đen mực tàu */
+  --sgkb-text-muted: #65584d;        /* Xám vỏ trà */
+  --sgkb-text-inverse: #fff;
+  --sgkb-text-secondary: #9b7705;
+  --sgkb-text-quaternary: #9ca3af;
+  --sgkb-text-tertiary: 0 10px 25px -5px rgb(37 99 235 / 10%);
+  --sgkb-shadow-xs-soft: 0 1px 3px rgb(0 0 0 / 8%);
+  --sgkb-shadow-active: 0 3px 8px rgb(179 57 25 / 18%);
+  --sgkb-header-bg: linear-gradient(135deg, #2c221e 0%, #4a3528 100%);
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --sgkb-primary-new: #1d4ed8;
+  --sgkb-search-focus-shadow: #1d4ed8;
+  --sgkb-border-soft: #f3f4f6;
+  --sgkb-shadow-primary-soft: 0 10px 25px -5px rgb(37 99 235 / 10%);
+  --color-brand-gray-50: #e0e6f1;
+  --color-brand-gray-100: #dadde2;
+  --color-brand-gray-200: #b5bbc5;
+  --color-brand-gray-300: #a0a7b2;
+  --color-brand-gray-400: #9ca3af;
+  --brand-gray-400: #9ca3af;
+  --color-brand-gray-500: #6b7280;
+  --brand-gray-500: #6b7280;
+  --color-brand-gray-600: #525865;
+  --color-brand-gray-900: #111827;
+  --brand-gray-900: #111827;
+}

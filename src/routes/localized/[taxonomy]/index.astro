@@ -48,7 +48,7 @@ const maxCount = Math.max(1, ...cloud.map((tag) => tag.posts.length));
                 : 'thumbnail'
               : undefined
           }
-          href={href(lang, `${kind}/${encodedSlug(slug)}/`)}
+          href={href(lang, `${kind === 'categories' ? 'category' : 'tag'}/${encodedSlug(slug)}/`)}
         >
           {entry?.data.image && (
             <img

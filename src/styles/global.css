@@ -960,6 +960,8 @@ input[type='search']::-webkit-search-decoration {
 .taxonomy-card > svg {
   color: var(--faint);
 }
+
+/* page: ARCHIVE */
 .archive-year {
   margin-bottom: 35px;
 }
@@ -994,6 +996,15 @@ input[type='search']::-webkit-search-decoration {
   text-decoration: underline;
   text-underline-offset: 4px;
 }
+.archive-post-category {
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding-inline: 8px;
+}
+
+/* page: FRIEND */
 /* Directory spacing follows ChatGPT's plugin catalogue. */
 .friends-directory {
   padding-bottom: 40px;

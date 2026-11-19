@@ -1,21 +1,21 @@
 ---
-import { pageLocale, routeLocales } from '../../../lib/i18n';
-import config from '../../../lib/config';
-import Layout from '../../../layouts/Layout.astro';
-import PostList from '../../../components/PostList.astro';
-import ThemeIcon from '../../../components/ThemeIcon.astro';
-import { contentImage } from '../../../lib/content-image';
-import ContentIntro from '../../../components/ContentIntro.astro';
+import { pageLocale, routeLocales } from '@/lib/i18n';
+import config from '@/lib/config';
+import Layout from '@/layouts/Layout.astro';
+import PostList from '@/components/PostList.astro';
+import ThemeIcon from '@/components/ThemeIcon.astro';
+import { contentImage } from '@/lib/content-image';
+import ContentIntro from '@/components/ContentIntro.astro';
 import {
   taxonomy,
   textEntriesFor,
   encodedSlug,
   type Post,
   type TextEntry,
-} from '../../../lib/content';
-import { t, href } from '../../../lib/i18n';
-import type { Locale } from '../../../types/config';
-import { isRealTranslation } from '../../../lib/locale-routing';
+} from '@/lib/content';
+import { t, href } from '@/lib/i18n';
+import type { Locale } from '@/types/config';
+import { isRealTranslation } from '@/lib/locale-routing';
 export async function getStaticPaths({
   routePattern,
 }: import('astro').GetStaticPathsOptions) {
@@ -24,7 +24,7 @@ export async function getStaticPaths({
     for (const kind of ['categories', 'tags'] as const)
       for (const group of await taxonomy(kind, lang, true))
         paths.push({
-          params: { taxonomy: kind, term: group.slug },
+          params: { taxonomy: kind === 'categories' ? 'category' : 'tag', term: group.slug },
           props: {
             posts: group.posts,
             entry: group.entry,

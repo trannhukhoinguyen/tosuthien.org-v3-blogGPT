@@ -57,9 +57,18 @@ for (const post of posts) {
                 .replace(/年|,\s*$/g, '')}
             </time>
             <a href={postHref(post, lang)}>{post.data.title}</a>
+            <a href={"/category" + post.data.category} target="_blank" class="archive-post-category" data-category={post.data.category}>{post.data.category}</a>
           </div>
         ))}
       </section>
     ))}
   </div>
 </Layout>
+
+<script>
+  // Chạy khi tải trang lần đầu và cả khi dùng Astro View Transitions
+  import { applyRandomBuddhistColors } from '@/scripts/helper.ts';
+
+  applyRandomBuddhistColors();
+  document.addEventListener('astro:after-swap', applyRandomBuddhistColors);
+</script>

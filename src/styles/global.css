@@ -1995,7 +1995,7 @@ input[type='search']::-webkit-search-decoration {
 .callout > p {
   margin-top: 8px;
 }
-.callout-tip,
+/*.callout-tip,
 .callout-success {
   --callout-color: #16885d;
 }
@@ -2009,7 +2009,7 @@ input[type='search']::-webkit-search-decoration {
 }
 .callout-question {
   --callout-color: #8b5cf6;
-}
+}*/
 .article-content .katex-display {
   overflow-x: auto;
   overflow-y: hidden;

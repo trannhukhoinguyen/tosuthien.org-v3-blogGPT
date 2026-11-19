@@ -80,7 +80,7 @@ const maxCount = Math.max(1, ...cloud.map((tag) => tag.posts.length));
         <div class="tag-cloud">
           {cloud.map(({ slug, entry, posts }) => (
             <a
-              href={href(lang, `tags/${encodedSlug(slug)}/`)}
+              href={href(lang, `tag/${encodedSlug(slug)}/`)}
               style={`--tag-size:${12 + (posts.length / maxCount) * 6}px`}
               aria-label={`${entry?.data.title ?? slug} · ${posts.length} ${ui.articleCount}`}
             >

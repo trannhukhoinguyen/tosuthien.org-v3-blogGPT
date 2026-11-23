@@ -183,7 +183,7 @@ export default LinjiMasterDb;
 28/ Thiền sư Tiếu Nham Đức Bảo (zh. 笑巖德寶, 1521-1581)
 29/ Thiền sư Vân Thê Châu Hoằng (zh. 雲棲袾宏, 1535–1615, Liên Trì Đại Sư)
 29/ Thiền sư Huyễn Hữu Chính Truyền (zh. 幻有正傳, 1549-1614)
-30/ Thiền sư Mật vân Viên Ngộ (zh. 密雲圓悟, 1566-1642), người lập ra phái Thiên Đồng - nhánh con của phái Vạn Phong.
+30/ Thiền sư Mật Vân Viên Ngộ (zh. 密雲圓悟, 1566-1642), người lập ra phái Thiên Đồng - nhánh con của phái Vạn Phong.
 31/ Thiền sư Lâm Dã Thông Kỳ (zh. 林野通奇, 1595-1652)
 32/ Thiền sư Hương Nghiêm Đạo An (zh. 香嚴道安, 1612-1689)
 33/ Thiền sư Tế Luân Siêu Vĩnh (zh. 霽崙超永)

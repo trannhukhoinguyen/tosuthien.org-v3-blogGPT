@@ -122,10 +122,12 @@ function loader(kind: ContentKind): Loader {
     },
   };
 }
+
 const list = z
   .union([z.string(), z.array(z.string())])
   .optional()
   .transform((value) => (typeof value === 'string' ? [value] : (value ?? [])));
+
 const date = z
   .string()
   .refine(validContentDate, dateRule)
@@ -163,6 +165,7 @@ const common = z.object({
     .optional(),
   coverStyle: z.enum(['thumbnail', 'fade', 'background']).optional(),
 });
+
 const posts = defineCollection({
   loader: loader('posts'),
   schema: common
@@ -192,6 +195,7 @@ const posts = defineCollection({
       tags: [...new Set(value.tags)].map(safeSlug),
     })),
 });
+
 const pages = defineCollection({
   loader: loader('pages'),
   schema: common
@@ -209,9 +213,12 @@ const pages = defineCollection({
       updated: value.updated ?? value.modDatetime ?? value.lastmod,
     })),
 });
+
 const categories = defineCollection({
   loader: loader('categories'),
   schema: common,
 });
+
 const tags = defineCollection({ loader: loader('tags'), schema: common });
+
 export const collections = { posts, pages, categories, tags };

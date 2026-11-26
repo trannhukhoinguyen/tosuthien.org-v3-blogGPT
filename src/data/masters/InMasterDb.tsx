@@ -890,4 +890,5 @@ const InMasterDb: EnlightenerInfo[] = [
     ],
   },
 ];
+
 export default InMasterDb;

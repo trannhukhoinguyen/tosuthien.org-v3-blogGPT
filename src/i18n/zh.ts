@@ -115,5 +115,13 @@ const messages = {
   manualShareCopy: '请按 Ctrl+C 复制分享文字',
   manualLinkCopy: '请按 Ctrl+C 复制链接',
   jumpSection: '跳转到这一节',
+  // OneTagFaq
+  oneTagFaqTitle: '问题',
+  oneTagFaqDescription: '常见问题解答请见右侧。如有其他疑问，请在页面内提问。',
+  oneTagFaqDefaultTitle: '您的问题',
+  oneTagFaqInputPlaceholder: '...',
+  oneTagFaqFirstButtonLabel: '问',
+  oneTagFaqNote: '仅在此页面回答。',
+  oneTagFaqSecondButtonLabel: '重新开始',
 };
 export default messages;

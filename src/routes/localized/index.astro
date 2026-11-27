@@ -7,6 +7,7 @@ import PostList from '@/components/PostList.astro';
 import ThemeIcon from '@/components/ThemeIcon.astro';
 import { postsFor } from '@/lib/content';
 import { href, localize, t } from '@/lib/i18n';
+import OneTagFaq from '@/components/ui/OneTagFaq.astro';
 const lang = pageLocale(Astro.routePattern);
 const posts = (await postsFor(lang)).slice(0, config.posts.homeLimit);
 const ui = t(lang);
@@ -22,7 +23,9 @@ const ui = t(lang);
     <div class="content-column home-composer-wrap">
       <SearchBox lang={lang} home />
     </div>
+    <!--<OneTagFaq />-->
   </section>
+
   <div class="content-column home-recent">
     <section>
       <div class="section-heading">

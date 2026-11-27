@@ -1,4 +1,6 @@
 import type { AstroExpressiveCodeOptions } from 'astro-expressive-code';
+import languages from '@/i18n/i18n.config.ts';
+
 type CodeTheme = Extract<
   NonNullable<AstroExpressiveCodeOptions['themes']>[number],
   string
@@ -44,6 +46,22 @@ export type StatisticsOptions = {
   recentWords: boolean;
   recentLimit: number;
 };
+
+// Phải dùng từ khóa `type` thay vì `const` khi khai báo kiểu dữ liệu
+export type LocalizedLang = keyof typeof languages;
+
+// Mapped type phải viết dạng `[K in LocalizedLang]`
+/*export type LocalizedFAQ = {
+  [K in LocalizedLang]: {
+    q: string;
+    a: string;
+  };
+};*/
+// Nếu có câu hỏi FAQ nào bạn chỉ mới dịch sang vi và en mà chưa có zh, ja, ko, hãy thêm từ khóa Partial để TypeScript không báo lỗi thiếu ngôn ngữ:
+export type LocalizedFAQ = Partial<
+  Record<LocalizedLang, { q: string; a: string }>
+>;
+
 export interface BlogConfig {
   site: {
     title: Localized;
@@ -54,6 +72,7 @@ export interface BlogConfig {
     localePrefixPolicy?:
       'redirect-to-default' | 'omit-default-prefix' | 'require-prefix';
     timezone: string;
+    faqs: LocalizedFAQ[];
   };
   author: {
     name: Localized;

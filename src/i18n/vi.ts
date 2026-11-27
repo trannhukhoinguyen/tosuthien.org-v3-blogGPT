@@ -24,7 +24,8 @@ const messages = {
   randomRecent: 'Đọc ngẫu nhiên một bài viết gần đây',
   focusSearch: 'Chuyển tiêu điểm vào ô tìm kiếm',
   shortcuts: 'Phím tắt',
-  resizeSidebar: 'Thay đổi kích thước thanh bên (dùng các phím mũi tên để điều chỉnh, phím Home để đặt lại)',
+  resizeSidebar:
+    'Thay đổi kích thước thanh bên (dùng các phím mũi tên để điều chỉnh, phím Home để đặt lại)',
   author: 'Tác giả và tùy chọn',
   appearance: 'Giao diện',
   light: 'Sáng',
@@ -67,7 +68,7 @@ const messages = {
   publishingYear: 'Số bài viết trong năm qua',
   heatmapLabel: 'Số lượng bài viết mỗi ngày trong 365 ngày qua',
   heatmapNote:
-'Các bài viết công khai theo múi giờ của trang web. Ô càng tối nghĩa là càng có nhiều bài viết.',
+    'Các bài viết công khai theo múi giờ của trang web. Ô càng tối nghĩa là càng có nhiều bài viết.',
   recentLengths: 'Độ dài các bài viết gần đây',
   lengthsLabel: 'Số ký tự trong các bài viết gần đây',
   articleDetails: 'Chi tiết bài viết',
@@ -97,7 +98,7 @@ const messages = {
   copyCode: 'Sao chép mã',
   bodyMatch: 'Nội dung',
   draftNotice:
-'Bản xem trước khi phát triển: bản nháp này sẽ không được đưa vào phiên bản chính thức.',
+    'Bản xem trước khi phát triển: bản nháp này sẽ không được đưa vào phiên bản chính thức.',
   viewImage: 'Xem hình ảnh',
   diagram: 'Sơ đồ',
   diagramSource: 'Nguồn sơ đồ',
@@ -118,5 +119,14 @@ const messages = {
   manualShareCopy: 'Nhấn Ctrl+C để sao chép văn bản chia sẻ',
   manualLinkCopy: 'Nhấn Ctrl+C để sao chép liên kết',
   jumpSection: 'Chuyển đến phần này',
+  // OneTagFaq
+  oneTagFaqTitle: 'Các câu hỏi',
+  oneTagFaqDescription:
+    'Các câu hỏi thường gặp được giải đáp ở phía bên phải. Nếu có vấn đề khác, hãy đặt câu hỏi trên trang này.',
+  oneTagFaqDefaultTitle: 'Các câu hỏi của bạn',
+  oneTagFaqInputPlaceholder: '...',
+  oneTagFaqFirstButtonLabel: 'Hỏi',
+  oneTagFaqNote: 'Chỉ trả lời từ trang này.',
+  oneTagFaqSecondButtonLabel: 'Bắt đầu lại',
 };
 export default messages;

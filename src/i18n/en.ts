@@ -118,5 +118,15 @@ const messages = {
   manualShareCopy: 'Press Ctrl+C to copy the share text',
   manualLinkCopy: 'Press Ctrl+C to copy the link',
   jumpSection: 'Jump to this section',
+  // OneTagFaq
+  oneTagFaqTitle: 'Questions',
+  oneTagFaqDescription:
+    'The usual ones are answered on the right. Anything else: ask the page.',
+  oneTagFaqDefaultTitle: 'Your questions',
+  oneTagFaqInputPlaceholder:
+    '...',
+  oneTagFaqFirstButtonLabel: 'Ask',
+  oneTagFaqNote: 'Answered from this page only.',
+  oneTagFaqSecondButtonLabel: 'Start over',
 };
 export default messages;

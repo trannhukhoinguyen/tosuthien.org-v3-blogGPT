@@ -65,7 +65,6 @@ export default defineConfig({
       defaultProps: { showLineNumbers: config.appearance.showCodeLineNumbers },
       styleOverrides: { borderRadius: '0.8rem', codeFontSize: '0.875rem' },
     }),
-    mdx(),
     icon({ include: { lucide: ['*'], 'simple-icons': ['*'] } }),
     sitemap({
       filter: (page) => {
@@ -90,6 +89,7 @@ export default defineConfig({
         '@/components/ui/Link2Post.astro',
       ],
     }),
+    mdx(),
   ],
   vite: { plugins: [tailwindcss()] },
 });

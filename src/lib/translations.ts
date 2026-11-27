@@ -1,8 +1,5 @@
 import interfaceLanguages, { DEFAULT_LOCALE } from '@/i18n/i18n.config.ts';
-import vi from '@/i18n/vi.ts';
 import en from '@/i18n/en.ts';
-import zh from '@/i18n/zh.ts';
-import ko from '@/i18n/ko.ts';
 import { canonicalLocale, localeChain } from './locale.ts';
 
 export type Messages = { [K in keyof typeof en]: string };
